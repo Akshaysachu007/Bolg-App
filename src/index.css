@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    @apply font-sans;
+  }
+  button {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+  }
+  a {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+  }
+}
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-[#e9e2d9] bg-white/70 shadow-soft dark:border-[#3e4a42] dark:bg-[#29362e];
+  }
+  .primary-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#223b2c] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .secondary-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#e3dbd0] bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink hover:bg-[#f5eee5] dark:border-[#526057] dark:bg-[#35453a] dark:text-[#f7f4eb];
+  }
+  .field {
+    @apply w-full rounded-xl border border-[#e5ded5] bg-white/80 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-[#9d9a91] focus:border-[#6c8974] focus:ring-2 focus:ring-[#dbe8da] dark:border-[#526057] dark:bg-[#29362e] dark:text-[#f7f4eb];
+  }
+  .label {
+    @apply mb-2 block text-sm font-semibold;
+  }
+  .tag {
+    @apply inline-flex items-center rounded-full bg-[#f8ded0] px-3 py-1 text-xs font-semibold text-[#a45d43];
+  }
+}
+.dark body {
+  background: #202b25;
+  color: #f4f0e9;
+}
+.dark .text-ink {
+  color: #f4f0e9;
+}
+.dark .bg-paper {
+  background: #202b25;
+}
+::selection {
+  background: #d6e4d6;
+  color: #21392b;
+}

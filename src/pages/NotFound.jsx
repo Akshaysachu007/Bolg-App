@@ -1,0 +1,2 @@
+import{Link}from'react-router-dom';import{Signpost}from'lucide-react';
+export default function NotFound(){return <div className="panel mx-auto max-w-xl px-6 py-20 text-center"><Signpost className="mx-auto mb-5 text-[#ba9078]" size={65}/><h1 className="font-serif text-7xl font-semibold">404</h1><h2 className="mt-3 font-serif text-2xl">Page not found</h2><p className="mt-3 text-sm text-[#8d8c80]">The page you are looking for doesn't exist or has been moved.</p><Link to="/" className="primary-btn mt-7">Back to Home</Link></div>}

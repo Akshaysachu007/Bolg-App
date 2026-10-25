@@ -1,0 +1,2 @@
+import{CheckCircle2,X}from'lucide-react';import{useUI}from'../context/UIContext';
+export default function Toast(){const{notice,notify}=useUI();if(!notice)return null;return <div role="status" className="fixed bottom-6 right-6 z-50 flex max-w-sm items-center gap-3 rounded-xl bg-forest px-5 py-4 text-sm font-semibold text-white shadow-xl"><CheckCircle2 size={20}/>{notice}<button onClick={()=>notify('')} aria-label="Dismiss notification"><X size={16}/></button></div>}
